@@ -7,7 +7,7 @@ function App() {
   {title:"Medicines", price:"Rs 100",  locationOfExpense:"Bangaluru"},
   {title:"Soda", price:"Rs 20", locationOfExpense:"Lucknow"}]
   return (
-    <>
+    <div className='app-items'> 
     <h1>Expense Tracker</h1>
        {
        arr.map(ele=>
@@ -15,7 +15,7 @@ function App() {
        return <Expense title={ele.title} price={ele.price} date={dateOf} locationOfExpense={ele.locationOfExpense}/>  
         })
         }
-         </>
+         </div>
        );
   }
 
