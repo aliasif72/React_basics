@@ -1,5 +1,5 @@
 import './App.css';
-import Expense from './components/ExpenseItems'
+import Expense from './components/Expenses/ExpenseItems'
 
 function App() {
   const dateOf=new Date();
