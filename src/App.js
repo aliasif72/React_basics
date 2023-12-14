@@ -10,7 +10,7 @@ function App() {
     <div className='app-items'> 
     <h1>Expense Tracker</h1>
        {
-       arr.map(ele=>
+       arr.map((ele)=>
         {
        return <Expense title={ele.title} price={ele.price} date={dateOf} locationOfExpense={ele.locationOfExpense}/>  
         })
