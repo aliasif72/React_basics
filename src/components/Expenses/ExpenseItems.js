@@ -12,8 +12,7 @@ function Expense(props)
            <div className="expense-item__description">
             <h3>{props.title}</h3>
               <div className="expense-item__price">{props.price}</div>
-              <div className="expense-item__price"> {props.locationOfExpense}</div>
-            </div>
+              </div>
             <button className="expense-item__button"  onClick={clickHandler}>Delete</button>
          </Card>   
    const[dis,setDis] = useState(disp);
@@ -22,6 +21,4 @@ function Expense(props)
         dis
         )
 }
-
-
 export default Expense
