@@ -1,6 +1,6 @@
 import './App.css';
-import ExpenseForm from './components/Expenses/ExpenseForm';
-import Expense from './components/Expenses/ExpenseItems'
+import NewExpense from './components/Expenses/NewExpense';
+import Expense from './components/Expenses/ExpenseItems';
 
 function App() {
   const dateOf=new Date();
@@ -10,7 +10,7 @@ function App() {
   return (
     <div className='app-items'> 
     <h1>Expense Tracker</h1>
-    <ExpenseForm/>
+    <NewExpense/>
        {
        arr.map((ele)=>
         {

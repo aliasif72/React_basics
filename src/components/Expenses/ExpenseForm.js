@@ -1,15 +1,24 @@
 import './NewExpense.css';
-import Card from '../UI/Card';
+import './ExpenseForm.css';
 function ExpenseForm(){
       return(
-        <Card className="new-expense" >
-        <div className="">
+        <form>         
+        <div className="new-expense__controls">
+        <div className="new-expense__control">
             <label>Date :  <input type="date"/></label>
-           <label> Title : <input  type="text"/></label>        
-            <label> Amount : <input type="text" size="7"/></label>
-            <button className="new-expense button" type="button">Add Expense</button>
-                    </div>
-        </Card>
+            </div>
+            <div className="new-expense__control">
+           <label> Title : <input  type="text"/></label>
+           </div>
+           <div className="new-expense__control">        
+            <label> Amount : <input type="text" /></label>
+            </div>
+            <div className="new-expense__actions">
+            <button className="new-expense button" type="submit">Add Expense</button>
+            </div>
+        </div>
+        </form>
+
     )
 }
 export default ExpenseForm
