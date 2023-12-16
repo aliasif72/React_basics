@@ -1,16 +1,19 @@
 import './App.css';
 import NewExpense from './components/Expenses/NewExpense';
 import Expense from './components/Expenses/ExpenseItems';
+import { useState } from 'react';
 
 function App() {
-  const dateOf=new Date();
-  const expenseArr=[{title:"Movies", amount:"Rs 200"},
-  {title:"Medicines", amount:"Rs 100"},
-  {title:"Soda", amount:"Rs 20"}]
+  const expenseArr=[{title:"Movies", amount:"Rs 200",date:new Date()},
+  {title:"Medicines", amount:"Rs 100", date:new Date()},
+  {title:"Soda", amount:"Rs 20", date:new Date()}]
+  const[Arr,setArr]=useState(expenseArr);
   function saveExpense(data)
   {
-   expenseArr.push(data);
-   console.log(expenseArr);
+    setArr((prevState)=>([...prevState,data]));
+    expenseArr.push(data);
+   console.log(Arr);
+ 
   }
   return (
     <div className='app-items'> 
@@ -19,7 +22,7 @@ function App() {
        {
        expenseArr.map((ele)=>
         {
-       return <Expense title={ele.title} price={ele.amount} date={dateOf}/>  
+       return <Expense title={ele.title} price={ele.amount} date={ele.date}/>  
         })
         }
          </div>
