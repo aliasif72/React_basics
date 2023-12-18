@@ -1,16 +1,18 @@
 import './App.css';
 import NewExpense from './components/Expenses/NewExpense';
-import Expense from './components/Expenses/ExpenseItems';
+import Expenses from './components/Expenses/Expenses';
 import { useState } from 'react';
 
 const dummyExpense=[{id:"e1",title:"Movies", amount:"Rs 200",date:new Date()},
 {id:"e2", title:"Medicines", amount:"Rs 100", date:new Date()},
 {id:"e3", title:"Soda", amount:"Rs 20", date:new Date()}];
+let num=4;
 
 function App() {
   const[expenseArr,setExpenseArr]=useState(dummyExpense);
   function saveExpense(data)
   {
+    data.id="e"+ num++;
     setExpenseArr((prevExpenseArr)=>{
     return [data,...prevExpenseArr]
   })
@@ -22,11 +24,8 @@ function App() {
     <h1>Expense Tracker</h1>
     <NewExpense onsaveExpense={saveExpense}/>
        {
-       expenseArr.map((ele)=>
-        {
-       return <Expense key={ele.id} title={ele.title} price={ele.amount} date={ele.date}/>  
-        })
-        }
+        <Expenses items={expenseArr}/>  
+              }
          </div>
        );
   }

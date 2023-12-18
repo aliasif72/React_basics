@@ -2,7 +2,7 @@ import {useState} from 'react';
 import './ExpenseItems.css';
 import ExpenseDate from './ExpenseDate';
 import Card from '../UI/Card';
-function Expense(props)
+function ExpenseItem(props)
 {
    const clickHandler=()=>{
     setDis(" ");
@@ -20,4 +20,4 @@ function Expense(props)
         dis
         )
 }
-export default Expense
+export default ExpenseItem
