@@ -41,8 +41,7 @@ function ExpenseForm(props){
                     enteredDate:'',
                     enteredAmount:''
                 });          
-            console.log(expenseInput); 
-           }
+                  }
 
       return(
         <form onSubmit={submitHandler} >         

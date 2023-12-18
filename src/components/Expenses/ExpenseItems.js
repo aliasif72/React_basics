@@ -16,7 +16,6 @@ function Expense(props)
             <button className="expense-item__button"  onClick={clickHandler}>Delete</button>
          </Card>   
    const[dis,setDis] = useState(disp);
-          
         return (
         dis
         )
