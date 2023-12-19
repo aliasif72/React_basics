@@ -1,14 +1,31 @@
 import './NewExpense.css';
 import ExpenseForm from './ExpenseForm';
+import { useState } from 'react';
 
 function NewExpense(props)
 {
+    const [form,setForm]=useState(false);
+
     function newExpense(data){
         props.onsaveExpense(data);
+        setForm(false);
     }
+
+    function showForm()
+    {
+        setForm(true);
+    }
+
+    function stopForm()
+    {
+       setForm(false);
+    }
+
     return(
         <div className='new-expense'>
-            <ExpenseForm onNewExpense={newExpense} />
+       {!form && <button onClick={showForm} className="positionOff">Add Expense</button>}
+         {form && <ExpenseForm onNewExpense={newExpense}
+          onCancel={stopForm}/>}
         </div>
     )
 }

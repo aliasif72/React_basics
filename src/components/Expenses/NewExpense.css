@@ -9,7 +9,7 @@
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
 }
 
-.new-expense button {
+ .new-expense button {
   font: inherit;
   cursor: pointer;
   width:auto;
@@ -18,9 +18,19 @@
   background-color: #40005d;
   color: white;
   border-radius: 12px;
+  
+ }
+
+ .positionOff{
   margin-left: 14.5rem;
-  margin-bottom:-2rem;;
- 
+   }
+
+.positionOn{
+  margin-left: 0.5rem;
+}
+
+.cancel{
+  margin-left: 5rem;
 }
 
 .new-expense button:hover,
