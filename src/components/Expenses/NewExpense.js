@@ -23,7 +23,7 @@ function NewExpense(props)
 
     return(
         <div className='new-expense'>
-       {!form && <button onClick={showForm} className="positionOff">Add Expense</button>}
+       {!form && <button onClick={showForm} >Add Expense</button>}
          {form && <ExpenseForm onNewExpense={newExpense}
           onCancel={stopForm}/>}
         </div>
